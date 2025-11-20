@@ -1,140 +1,138 @@
-📘 Estudo de Caso – Aplicação Web + Mobile (React / React Native)
+# 📚 Estudo de Caso — Aplicação Web + Mobile (React / React Native)
 
 Este projeto consiste no desenvolvimento de uma aplicação completa composta por:
 
-Aplicação Web (React + Vite)
+- **Aplicação Web (React + Vite)**
+- **Aplicação Mobile (React Native + Expo + Expo Router)**
+- **Consumo de API externa com Axios**
+- **Testes automatizados usando Vitest + Testing Library**
 
-Aplicação Mobile (React Native + Expo + Expo Router)
+O objetivo é listar alunos cadastrados na API, exibir detalhes e permitir navegação tanto no web quanto no mobile.
 
-Consumo de API externa com Axios
+---
 
-Testes automatizados usando Vitest e Testing Library
+## 🚀 Tecnologias Utilizadas
 
-O objetivo é listar alunos cadastrados na API, exibir detalhes individuais e permitir navegação tanto no web quanto no mobile.
+### **🔵 Web**
+- React
+- React Router DOM
+- Axios
+- Vite
+- Vitest + @testing-library/react
+- Bootstrap
 
-🚀 Tecnologias Utilizadas
-Web
+### **🟢 Mobile**
+- React Native
+- Expo
+- Expo Router (file-based routing)
+- Axios
 
-React
+---
 
-React Router DOM
+## 📁 Estrutura do Projeto
 
-Axios
-
-Vite
-
-Bootstrap
-
-Vitest + @testing-library/react
-
-Mobile
-
-React Native
-
-Expo
-
-Expo Router
-
-Axios
-
-📁 Estrutura do Projeto
-meu-estudo-caso/
+projeto-react-app/
+│
 ├── web/
-│   ├── src/
-│   │   ├── main.jsx
-│   │   ├── index.css
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   └── StudentDetails.jsx
-│   │   ├── services/
-│   │   │   ├── api.js
-│   │   │   └── studentService.js
-│   │   └── tests/
-│   │       ├── Home.test.jsx
-│   │       └── StudentDetails.test.jsx
-│   ├── index.html
-│   └── vite.config.js
+│ ├── src/
+│ │ ├── assets/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ │ ├── Home.jsx
+│ │ │ └── StudentDetails.jsx
+│ │ ├── services/
+│ │ │ ├── api.js
+│ │ │ └── studentService.js
+│ │ ├── tests/
+│ │ │ ├── Home.test.jsx
+│ │ │ └── StudentDetails.test.jsx
+│ │ ├── main.jsx
+│ │ └── index.css
+│ ├── index.html
+│ └── vite.config.js
 │
 └── mobile/
-    ├── app/
-    │   ├── index.js
-    │   └── student/
-    │       └── [id].js
-    ├── src/
-    │   └── screens/
-    │       ├── Home.js
-    │       └── StudentDetails.js
-    ├── assets/
-    ├── app.json
-    ├── package.json
-    └── tsconfig.json
+├── app/
+│ ├── index.js
+│ └── student/
+│ └── [id].js
+└── src/
+└── screens/
+├── Home.js
+└── StudentDetails.js
+---
 
-💻 Como Rodar o Projeto Web
-1️⃣ Instalar dependências
+## 🌐 Como Rodar o Projeto **Web**
 
-No diretório web/:
+### 1️⃣ Instalar dependências  
+No diretório **web/**:
 
-npm install
+### 2️⃣ Rodar o projeto  
 
-2️⃣ Rodar o projeto:
-npm run dev
+### 3️⃣ Acessar no navegador  
+👉 http://localhost:5173
 
-3️⃣ Acessar no navegador:
-http://localhost:5173
+---
 
-📱 Como Rodar o Projeto Mobile
-1️⃣ Instalar dependências
+## 📱 Como Rodar o Projeto **Mobile**
 
-No diretório mobile/:
+### 1️⃣ Instalar dependências  
+No diretório **mobile/**:
 
-npm install
+### 2️⃣ Rodar o Expo  
 
-2️⃣ Rodar o Expo:
-npm start
+### 3️⃣ Abrir no celular  
+- Instale **Expo Go** (Android/iOS)
+- Escaneie o QR Code exibido no terminal
 
-3️⃣ Abrir no celular:
+---
 
-Instale Expo Go na App Store ou Google Play
+## 🧭 Rotas Implementadas
 
-Escaneie o QR Code exibido no terminal
+### **Web**
+| Rota | Descrição |
+|------|-----------|
+| `/` | Lista de alunos |
+| `/student/:id` | Detalhes do aluno |
 
-🔗 Rotas Implementadas
-Web
-Rota	Descrição
-/	Lista de alunos
-/student/:id	Detalhes do aluno
-Mobile (Expo Router)
-Arquivo	Rota Gerada
-app/index.js	/
-app/student/[id].js	/student/:id
-🧪 Como rodar os testes (Web)
+### **Mobile (Expo Router)**
+| Rota | Arquivo |
+|------|---------|
+| `/` | app/index.js |
+| `/student/[id]` | app/student/[id].js |
 
-No diretório web/:
+---
 
-1️⃣ Instalar dependências de testes (já instaladas):
-npm install
+## 🧪 Como Rodar os Testes (Web)
 
-2️⃣ Rodar os testes:
-npm test
+No diretório **web/**:
 
+### 1️⃣ Instalar dependências de testes  
 
-Os testes usam:
-✔ Vitest
-✔ @testing-library/react
-✔ jsdom
+### 2️⃣ Rodar os testes  
 
-📡 API Consumida
+Os testes utilizam:  
+✔️ Vitest  
+✔️ @testing-library/react  
+✔️ jsdom  
 
-Os dados são carregados a partir de uma API Fake (MockAPI ou similar), utilizando Axios.
+---
 
-Serviço implementado em:
+## 🌐 API Consumida
 
-web/src/services/studentService.js
-mobile/src/screens/StudentDetails.js
+Os dados são carregados a partir de uma API Fake (MockAPI ou similar), utilizando **Axios**.
 
-👤 Autor
+Pontos de consumo:
 
-Victor Andrey
+- `web/src/services/studentService.js`
+- `mobile/src/screens/StudentDetails.js`
+
+---
+
+## 👤 Autor
+
+**Victor Andrey**  
 Projeto desenvolvido como parte da avaliação da disciplina.
+
+---
+
