@@ -1,4 +1,4 @@
-# 📚 Estudo de Caso — Aplicação Web + Mobile (React / React Native)
+# 📚 AV2 — Aplicação Web + Mobile (React / React Native)
 
 Este projeto consiste no desenvolvimento de uma aplicação completa composta por:
 
@@ -135,4 +135,5 @@ Pontos de consumo:
 Projeto desenvolvido como parte da avaliação da disciplina.
 
 ---
+
 
