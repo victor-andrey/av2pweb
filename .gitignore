@@ -1,0 +1,24 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+dist/
+
+# WEB
+web/node_modules/
+web/dist/
+
+# MOBILE / EXPO
+mobile/node_modules/
+mobile/.expo/
+mobile/.expo-shared/
+mobile/android/
+mobile/ios/
+mobile/build/
+
+# vscode
+.vscode/
+
+# misc
+.DS_Store
+Thumbs.db
